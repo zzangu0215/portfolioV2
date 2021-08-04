@@ -97,7 +97,9 @@ body {
 }
 .logo {
   order: 1;
-  font-size: 2.3rem;
+  /* font-size: 2.3rem; */
+  padding: 3px;
+  height: 50px;
 }
 
 .menu-items li {

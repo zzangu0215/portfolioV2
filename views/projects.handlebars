@@ -1,0 +1,25 @@
+<h1 class="projects-h1" style="text-align: center;"><span class="glyphicon glyphicon-book" area-hidden="true"></span> Projects & Works</h1>
+
+{{#if projects.length}}
+<div class="row projects">
+  {{#each projects as |project|}}
+  <div class="col-sm-6 col-md-4"><!--start element 1-->
+    <div class="thumbnail shadow up-hover">
+      <img src="/images/{{project.thumbnail}}"/> 
+      <div class="cust-caption">
+        {{#if project.deployed_link}}
+        <a href="{{project.deployed_link}}"><h3 class="stm-font">{{project.name}}</h3></a>
+        {{else}}
+        <h3 class="stm-font">{{project.name}}</h3>
+        {{/if}}
+        <p>{{project.description}}</p>
+        <p><strong>Technologies Used: </strong>{{project.technologies}}</p>
+        <a href="{{project.github_link}}"><h4 class="stm-font">Github Repository</h4></a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}
+
+<script src="/js/projects.js"></script>

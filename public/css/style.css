@@ -1,7 +1,51 @@
 body {
-  font-family: "Montserrat", sans-serif;
-  margin: 0px;
   background-image: url("../images/random-grey-variations.png");
   background-repeat: repeat;
-  opacity: 0.92;
+  opacity: 0.95;
+  position: relative;
+}
+
+/* projects page */
+.thumbnail {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.shadow {
+  box-shadow: 7px 7px 7px #666;
+  position: relative;
+  transition: all 0.2s;
+  top: 0;
+}
+
+.cust-caption {
+  display: none;
+  position: absolute;
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 10px;
+  color: #ddd;
+  margin: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  margin: 5px;
+  overflow-y: auto;
+}
+
+.stm-font {
+  font-family: "Share Tech Mono", monospace;
+}
+
+.up-hover:hover {
+  top: -5px;
+  box-shadow: 15px 15px 15px #777;
+}
+
+.cust-caption a {
+  color: white;
+
+  text-shadow: 1px 1px 2px black;
 }

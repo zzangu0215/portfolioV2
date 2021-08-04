@@ -19,6 +19,10 @@ Projects.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
+    thumbnail: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     description: {
       type: DataTypes.TEXT,
       allowNull: false,

@@ -12,16 +12,39 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/projects", async (req, res) => {
+router.get("/group-projects", async (req, res) => {
   try {
-    const projectsData = await Projects.findAll();
+    const groupProjectData = await Projects.findAll({
+      where: {
+        isTeamProject: true,
+      },
+    });
 
-    const projects = projectsData.map((project) =>
-      project.get({ plain: true })
+    const groupProjects = groupProjectData.map((gp) => gp.get({ plain: true }));
+
+    res.render("group-projects", {
+      groupProjects,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
+  }
+});
+
+router.get("/personal-projects", async (req, res) => {
+  try {
+    const personalProjectData = await Projects.findAll({
+      where: {
+        isTeamProject: false,
+      },
+    });
+
+    const personalProjects = personalProjectData.map((pp) =>
+      pp.get({ plain: true })
     );
 
-    res.render("projects", {
-      projects,
+    res.render("personal-projects", {
+      personalProjects,
     });
   } catch (err) {
     console.log(err);

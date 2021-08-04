@@ -12,6 +12,24 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/aboutme", async (req, res) => {
+  try {
+    res.render("aboutme");
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
+  }
+});
+
+router.get("/projects", async (req, res) => {
+  try {
+    res.render("projects");
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
+  }
+});
+
 router.get("/group-projects", async (req, res) => {
   try {
     const groupProjectData = await Projects.findAll({

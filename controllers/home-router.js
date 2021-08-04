@@ -5,9 +5,7 @@ const router = require("express").Router();
 
 router.get("/", async (req, res) => {
   try {
-    res.render("home", {
-      isLoggedIn: req.session.isLoggedIn,
-    });
+    res.render("home");
   } catch (err) {
     console.error(err);
     res.status(500).send("⛔ Uh oh! An unexpected error occurred.");

@@ -70,6 +70,15 @@ router.get("/personal-projects", async (req, res) => {
   }
 });
 
+router.get("/leave-comment", async (req, res) => {
+  try {
+    res.render("leave-comment");
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
+  }
+});
+
 router.get("/comments", async (req, res) => {
   try {
     const commentData = await Comments.findAll();

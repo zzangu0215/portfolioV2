@@ -1,8 +1,22 @@
 {{#if comments.length}}
-{{#each comments as |comment|}}
-<h1>{{comment.name}}</h1>
-<h2>{{comment.email}}</h2>
-<h3>{{comment.interests}}</h3>
-<h3>{{comment.reviews}}</h3>
-{{/each}}
+<div class="main-container">
+  <div class="heading">
+    <br><br>
+    <h1 class="heading__title">Visitor Comments</h1>
+  </div>
+  {{#each comments as |comment|}}
+  <div class="review-cards">
+    <div class="review-card">
+      <div class="review-card__icon">
+        <h1><i class="glyphicon glyphicon-thumbs-up"></i> {{comment.name}} <br><span class="review-interests">Interests: {{comment.interests}}</span></h1>
+      </div>
+      <h2 class="review-card__title"><br>{{comment.reviews}}</h2>
+      <p class="review-card__apply">
+        <br>
+        <a class="review-card__link" href="mailto:{{comment.email}}"><i class="glyphicon glyphicon-envelope"></i> {{comment.email}}</a>
+      </p>
+    </div>
+  </div>
+  {{/each}}
+</div>
 {{/if}}

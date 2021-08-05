@@ -383,7 +383,7 @@ h2 {
   text-align: center;
 }
 
-/* comments */
+/* leave a comment form */
 
 .comment-header {
   color: #111;
@@ -521,5 +521,99 @@ h2 {
   .comments__form-info,
   .comments__form-text {
     width: 407px;
+  }
+}
+
+/* comments page */
+
+.main-container {
+  padding: 30px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.review-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.review-card {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  background-color: darkgray;
+}
+
+.review-card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.review-card__link,
+.review-card__exit,
+.review-card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.review-card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.review-card__link:hover::after {
+  width: 100%;
+}
+
+.review-card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.review-card__icon {
+  /* grid-row: 2/3; */
+  font-size: 30px;
+}
+
+.review-card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.review-interests {
+  text-align: right;
+  font-size: 20px;
+  color: gold;
+  font-weight: bolder;
+}
+
+.review-card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+/* review-card BACKGROUNDS */
+
+@media (max-width: 1600px) {
+  .review-cards {
+    justify-content: center;
   }
 }

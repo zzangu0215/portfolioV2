@@ -383,6 +383,109 @@ h2 {
   text-align: center;
 }
 
+.showcase {
+  text-align: center;
+}
+
+.showcase h1 {
+  font-size: 8em;
+}
+
+.showcase h2 {
+  color: grey;
+}
+
+.avatar {
+  display: block;
+  position: relative;
+  width: 200px;
+  margin: auto;
+}
+
+.bio-container {
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bio-container h2 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.bio-container p {
+  font-size: 20px;
+}
+
+.btn-2 {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn-2 a {
+  text-decoration: none;
+  border: 2px solid #010100;
+  padding: 15px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-2 a:hover::before {
+  transform: scaleY(0);
+}
+
+.btn-2 a:hover::after {
+  transform: scaleX(0);
+}
+
+.btn-2 a {
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-2 a:hover {
+  color: #000000;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-2 a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+  transform: scaleY(1);
+}
+
+.btn-2 a::after {
+  content: "Check out My Projects! Explore my group projects and personal projects HERE!!";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+
 /* leave a comment form */
 
 .comment-header {

@@ -376,3 +376,9 @@ h2 {
 .follow-me:hover span {
   animation-play-state: paused;
 }
+
+/* about me page */
+
+.aboutme-h1 {
+  text-align: center;
+}

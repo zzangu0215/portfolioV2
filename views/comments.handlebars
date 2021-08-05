@@ -1,0 +1,8 @@
+{{#if comments.length}}
+{{#each comments as |comment|}}
+<h1>{{comment.name}}</h1>
+<h2>{{comment.email}}</h2>
+<h3>{{comment.interests}}</h3>
+<h3>{{comment.reviews}}</h3>
+{{/each}}
+{{/if}}

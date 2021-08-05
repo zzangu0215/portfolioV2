@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Projects } = require("../models");
+const { Projects, Comments } = require("../models");
 
 // const withAuth = require("../util/withAuth");
 
@@ -63,6 +63,21 @@ router.get("/personal-projects", async (req, res) => {
 
     res.render("personal-projects", {
       personalProjects,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
+  }
+});
+
+router.get("/comments", async (req, res) => {
+  try {
+    const commentData = await Comments.findAll();
+
+    const comments = commentData.map((comment) => comment.get({ plain: true }));
+
+    res.render("comments", {
+      comments,
     });
   } catch (err) {
     console.log(err);
